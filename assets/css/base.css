@@ -1,0 +1,47 @@
+@font-face {
+    font-family: Noir-Med;
+    src: url("../fonts/noir-med.otf");
+}
+
+@font-face {
+    font-family: Noir;
+    src: url("../fonts/noir-reg.otf");
+}
+
+@font-face {
+    font-family: SSB-Light;
+    src: url("../fonts/SansSerifFLF.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+header > i {
+    font-size: 1.5rem;
+    padding-bottom: 1.2rem;
+}
+
+header > a {
+    margin-left: 1rem;
+    font-family: Noir-Med, sans-serif;
+    font-size: 3rem;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow;
+    transition-duration: .2s;
+}
