@@ -46,6 +46,62 @@ header > a {
     transition-duration: .2s;
 }
 
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 88vh;
+    flex-wrap: wrap;
+}
+
+.option {
+    width: 300px;
+    height: 350px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    margin: 1rem;
+    padding: 0 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition-property: color, background-color, transform;
+    transition-duration: .2s;
+    transition-timing-function: ease;
+}
+
+.option > i {
+    font-size: 2.5rem;
+}
+
+.option > h1 {
+    font-family: Noir, sans-serif;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+}
+
+.option > p {
+    text-align: justify;
+    font-family: Calibri, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}
+
+.option:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-15px);
+    box-shadow: 0px 0px 30px 10px #888888;
+}
+
+@media only screen and (max-width: 420px) {
+    .option:hover {
+        transform: translateY(0px);
+    }
+}
+
 @media only screen and (max-width: 420px) {
     header {
         flex-direction: column;
