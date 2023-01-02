@@ -100,9 +100,11 @@ header > a {
     .option:hover {
         transform: translateY(0px);
     }
-}
 
-@media only screen and (max-width: 420px) {
+    .options {
+        margin-top: 20px;
+    }
+
     header {
         flex-direction: column;
     }
