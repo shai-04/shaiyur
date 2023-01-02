@@ -17,7 +17,7 @@ body {
     height: 350px;
     border: 2px solid #fff;
     border-radius: 15px;
-    margin: 0 1rem;
+    margin: 1rem;
     padding: 0 1rem;
 
     display: flex;
@@ -42,7 +42,7 @@ body {
 
 .option > p {
     text-align: justify;
-    font-family:'Times New Roman', Times, serif;
+    font-family: Calibri, 'Times New Roman', Times, serif;
     font-size: 1rem;
 }
 
@@ -53,4 +53,10 @@ body {
     transform: translateY(-25px);
     box-shadow: 0px 0px 30px 10px #888888;
 
+}
+
+@media only screen and (max-width: 420px) {
+    .option:hover {
+        transform: translateY(0px);
+    }
 }
