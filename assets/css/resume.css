@@ -3,3 +3,73 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.information {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.info_block {
+    padding: 20px;
+    margin: 0 10px;
+    width: 90%;
+    max-width: 500px;
+
+    border: 2px solid #fff;
+    border-radius: 15px;
+
+    transition-property: color, background-color, transform;
+    transition-duration: .2s;
+    transition-timing-function: ease;
+}
+
+.info_block > img {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.info_block > i {
+    display: block;
+    text-align: center;
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.info_block > h1 {
+    font-family: Noir, sans-serif;
+    font-size: 2rem;
+}
+
+.info_block > p, td {
+    text-align: justify;
+    font-family: Calibri, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}
+
+
+.info_block:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 30px 10px #888888;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    width: 50%;
+    padding: 5px;
+}
+
+@media only screen and (max-width: 1040px) {
+    .info_block {
+        margin: 20px 20px;
+    }
+}
