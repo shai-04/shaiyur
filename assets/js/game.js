@@ -1,39 +1,44 @@
-import {Sonic} from './sonic.js'
-import {Input} from './input.js'
+let app;
+let player;
+let keys = {};
 
-window.addEventListener('load', function() {
-    const canvas = document.getElementById("game");
-    const ctx = canvas.getContext("2d");
+window.onload = function() {
+    app = new PIXI.Application({
+        width: 800,
+        height: 600,
+        backgroundColor: 0x000000
+    });
 
-    canvas.width = 640;
-    canvas.height = 480;
+    document.body.appendChild(app.view);
 
-    class Game {
-        constructor(width, height) {
-            this.width = width;
-            this.height = height;
+    // Load assets
+    loader.add("sonic_spritesheet", "assets/images/sonic_sprite.png");
 
-            this.input = new Input();
-            this.sonic = new Sonic(this);
-        }
+    window.addEventListener("keydown", keyDown);
+    window.addEventListener("keyup", keyUp);
 
-        update() {
-            this.sonic.update(this.input.keys);
-        }
+    app.ticker.add(gameLoop);
+};
 
-        draw(ctx) {
-            this.sonic.draw(ctx);
-        }
-    }
+function keyDown(e) {
+    // console.log(e.keyCode);
+    keys[e.keyCode] = true;
+}
 
-    const game = new Game(canvas.width, canvas.height);
+function keyUp(e) {
+    keys[e.keyCode] = false;
+}
 
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        game.update();
-        game.draw(ctx);
-        requestAnimationFrame(animate);
-    }
+function gameLoop() {
 
-    animate();
-});
+}
+
+function showProgress(e) {
+    console.log("loading " + e.message);
+}
+function doneLoading(e) {
+    console.log("done loading " + e.message);
+}
+function errorLoading(e) {
+    console.log("error " + e.message);
+}

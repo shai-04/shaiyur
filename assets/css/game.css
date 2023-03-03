@@ -5,20 +5,14 @@ body > h1 {
     margin-bottom: 10px;
 }
 
-body > img {
-    display: none;
-}
-
 body {
     background-image: url("../images/background.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#game {
+canvas {
     display: block;
-    width: 640px;
-    height: 480px;
     margin: 0 auto; 
     border: 1px solid #fff;
 }
