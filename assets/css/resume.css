@@ -2,6 +2,7 @@ body {
     background-image: url("../images/background.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    padding-bottom: 2rem;
 }
 
 main {
@@ -11,7 +12,6 @@ main {
 
 .info_block {
     padding: 20px;
-    margin: 10px;
     width: 90%;
     max-width: 500px;
 
@@ -79,8 +79,9 @@ td {
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 10px;
-    align-content: center;
+    justify-items: center;
+    /* align-items: center; */
+    gap: 20px 10px;
 }
 
 #block1 {
@@ -105,10 +106,4 @@ td {
     #block3 {grid-column: 1; grid-row: 4;}
     #block4 {grid-column: 1; grid-row: 5;}
     #block5 {grid-column: 1; grid-row: 6;}
-}
-
-@media only screen and (max-width: 1040px) {
-    .info_block {
-        margin: 20px 20px;
-    }
 }
