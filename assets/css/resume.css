@@ -1,13 +1,10 @@
-body {
-    background-image: url("../images/background.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 2rem;
-}
-
 main {
     display: block;
     margin: 0 auto;
+}
+
+body {
+    padding-bottom: 20px;
 }
 
 .info_block {
